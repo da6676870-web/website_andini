@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thunders Digital Printing and Advertising</title>
+
+<style>
+:root {
+    --navy: #071f50;
+    --blue: #0754c7;
+    --red: #ed241c;
+    --sky: #eaf3ff;
+    --ink: #172b4d;
+    --muted: #64748b;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    background: #f7f9fc;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #fff;
+    box-shadow: 0 3px 18px #071f5015;
+    padding: 10px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 230px;
+}
+
+.brand img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.brand strong {
+    display: block;
+    color: var(--navy);
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.brand span {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    color: var(--red);
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+/* BERANDA */
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 75px 9%;
+    color: #fff;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(4,24,65,.94),
+        rgba(4,39,103,.65)
+    ),
+    url("assets/foto-toko.jpg");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #a9d4ff;
+}
+
+.hero h1 {
+    font-size: clamp(34px,5vw,55px);
+    line-height: 1.13;
+    margin: 17px 0;
+}
+
+.hero h1 span {
+    color: #ff5148;
+}
+
+.hero p {
+    font-size: 17px;
+    max-width: 620px;
+    color: #e5efff;
+    margin-bottom: 27px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 7px;
+    font-weight: 800;
+}
+
+.btn:hover {
+    background: #c91d17;
+}
+
+/* SECTION UMUM */
+section {
+    padding: 76px 8%;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-head small {
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--blue);
+}
+
+.section-head h2 {
+    font-size: clamp(27px,4vw,36px);
+    color: var(--navy);
+    margin: 5px 0;
+}
+
+.section-head p {
+    color: var(--muted);
+}
+
+/* PROFIL PERUSAHAAN */
+.profile {
+    background: #fff;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 38px;
+    align-items: center;
+}
+
+.store-photo {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px #071f5020;
+}
+
+.profile-copy h3 {
+    font-size: 27px;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.profile-copy p {
+    color: #53657d;
+    margin-bottom: 13px;
+}
+
+.slogan {
+    display: inline-block;
+    margin: 8px 0 15px;
+    padding: 8px 13px;
+    background: #fff0ef;
+    color: var(--red);
+    font-weight: 900;
+    border-radius: 6px;
+}
+
+.info {
+    border-top: 1px solid #dce4ef;
+    margin-top: 18px;
+    padding-top: 12px;
+}
+
+.info p {
+    margin: 7px 0;
+    color: var(--ink);
+}
+
+/* SEJARAH */
+.history {
+    background: var(--sky);
+}
+
+.history-box {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 32px;
+    border-radius: 14px;
+    border-left: 5px solid var(--blue);
+    box-shadow: 0 8px 25px #071f500b;
+}
+
+.history-box h3 {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.history-box p {
+    color: #53657d;
+}
+
+/* VISI MISI */
+.vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.vm-card {
+    background: var(--navy);
+    color: #fff;
+    padding: 27px;
+    border-radius: 13px;
+}
+
+.vm-card h3 {
+    color: #8cc9ff;
+    margin-bottom: 8px;
+}
+
+/* PRODUK DAN FOTO */
+.services {
+    background: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    gap: 17px;
+}
+
+.product {
+    background: #f4f7fc;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px #071f5010;
+    transition: .25s;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px #071f5020;
+}
+
+.product img {
+    width: 100%;
+    height: 270px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-copy {
+    padding: 16px 13px;
+    text-align: center;
+}
+
+.product h3 {
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 5px;
+}
+
+.product p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* KEUNGGULAN */
+.advantages {
+    background: var(--navy);
+    color: #fff;
+}
+
+.advantages .section-head h2 {
+    color: #fff;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+    text-align: center;
+}
+
+.advantage {
+    padding: 22px;
+}
+
+.advantage .symbol {
+    font-size: 34px;
+    color: #8cc9ff;
+}
+
+.advantage h3 {
+    color: #8cc9ff;
+    margin: 8px 0;
+}
+
+.advantage p {
+    color: #d9e6f8;
+    font-size: 14px;
+}
+
+/* KONTAK */
+.contact {
+    background: #edf4ff;
+}
+
+.contact-box {
+    max-width: 850px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px #071f5010;
+}
+
+.contact-box p {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    background: #04152f;
+    color: #fff;
+    text-align: center;
+    padding: 32px 7%;
+}
+
+footer img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+footer .tagline {
+    color: #ff8b85;
+    font-weight: 700;
+}
+
+footer small {
+    display: block;
+    color: #c6d3e7;
+    margin-top: 16px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px) {
+    .gallery {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(max-width:760px) {
+
+    header {
+        flex-direction: column;
+        padding: 12px 5%;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 460px;
+        padding: 55px 7%;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .store-photo {
+        height: 300px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .product img {
+        height: 230px;
+    }
+{
+    
+}
+
+@media(max-width:480px) {
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .gallery,
+    .vm-grid,
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product img {
+        height: 300px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .history-box {
+        padding: 23px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER DAN LOGO -->
+<header>
+
+    <div class="brand">
+
+        <img src="logo.jpg"
+        alt="Logo Thunders Digital Printing">
+
+        <div>
+            <strong>THUNDERS DIGITAL</strong>
+            <span>PRINTING AND ADVERTISING</span>
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil</a>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#produk">Produk</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+</header>
+
+
+<!-- BERANDA -->
+<main>
+
+<div class="hero" id="beranda">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            WELCOME TO THUNDERS DIGITAL
+        </div>
+
+        <h1>
+            Cetak Cepat,<br>
+            <span>Promosi Tepat,</span><br>
+            Harga Hemat!
+        </h1>
+
+        <p>
+            Thunders Digital Printing and Advertising
+            melayani berbagai kebutuhan percetakan
+            dan media promosi, mulai dari cutting sticker,
+            sablon, spanduk, lanyard, hingga produk
+            promosi lainnya.
+        </p>
+
+        <a class="btn" href="#produk">
+            Lihat Produk Kami
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PROFIL PERUSAHAAN -->
+<section class="profile" id="profil">
+
+    <div class="section-head">
+
+        <small>COMPANY PROFILE</small>
+
+        <h2>Profil Perusahaan</h2>
+
+        <p>
+            Mengenal Thunders Digital Printing
+            and Advertising lebih dekat.
+        </p>
+
+    </div>
+
+    <div class="profile-grid">
+
+        <img class="store-photo"
+        src="profil.jpg"
+        alt="Tampak depan toko Thunders Digital Printing">
+
+        <div class="profile-copy">
+
+            <h3>
+                Thunders Digital Printing and Advertising
+            </h3>
+
+            <p>
+                Thunders Digital Printing and Advertising
+                merupakan usaha di bidang percetakan digital
+                dan advertising yang menyediakan beragam
+                kebutuhan cetak serta media promosi
+                untuk pelanggan.
+            </p>
+
+            <p>
+                Dengan layanan yang beragam, Thunders
+                membantu kebutuhan promosi dan produksi,
+                seperti spanduk, baliho, stiker, sablon,
+                lanyard, merchandise, dan berbagai
+                kebutuhan percetakan lainnya.
+            </p>
+
+            <div class="slogan">
+                "Cetak Cepat, Promosi Tepat, Harga Hemat!"
+            </div>
+
+            <div class="info">
+
+                <p>
+                    <b>Nama Usaha:</b>
+                    Thunders Digital Printing and Advertising
+                </p>
+
+                <p>
+                    <b>Bidang:</b>
+                    Digital Printing dan Advertising
+                </p>
+
+                <p>
+                    <b>Alamat:</b>
+                    Jl. Kasuari, Komplek Kasuari Indah
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SEJARAH -->
+<section class="history" id="sejarah">
+
+    <div class="section-head">
+
+        <small>OUR STORY</small>
+
+        <h2>Sejarah Perusahaan</h2>
+
+        <p>
+            Perjalanan Thunders dalam melayani
+            kebutuhan cetak dan promosi.
+        </p>
+
+    </div>
+
+    <div class="history-box">
+
+        <h3>
+            Thunders Digital Printing and Advertising
+        </h3>
+
+        <p>
+            Thunders Digital Printing and Advertising
+            hadir untuk membantu pelanggan memenuhi
+            kebutuhan percetakan dan promosi.
+
+            Berbagai pekerjaan dilakukan dengan dukungan
+            peralatan digital printing serta proses produksi
+            seperti cutting sticker, cutting spanduk,
+            sablon goodie bag, pembuatan lanyard,
+            dan sablon baju.
+
+            Perusahaan terus berupaya memberikan hasil
+            cetak yang baik, pelayanan yang ramah,
+            dan solusi promosi sesuai kebutuhan pelanggan.
+        </p>
+
+    </div>
+
+    <div class="vm-grid">
+
+        <div class="vm-card">
+
+            <h3>Visi</h3>
+
+            <p>
+                Menjadi penyedia layanan digital printing
+                dan advertising yang dapat diandalkan,
+                kreatif, dan mengutamakan kualitas.
+            </p>
+
+        </div>
+
+        <div class="vm-card">
+
+            <h3>Misi</h3>
+
+            <p>
+                Memberikan layanan percetakan yang beragam,
+                menjaga kualitas hasil produksi,
+                serta membantu pelanggan menyampaikan
+                promosi secara efektif.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUK DAN KEGIATAN PRODUKSI -->
+<section class="services" id="produk">
+
+    <div class="section-head">
+
+        <small>OUR WORK</small>
+
+        <h2>Produk dan Kegiatan Produksi</h2>
+
+        <p>
+            Dokumentasi langsung kegiatan produksi
+            Thunders Digital Printing.
+        </p>
+
+    </div>
+
+    <div class="gallery">
+
+        <!-- FOTO 1 -->
+        <article class="product">
+
+            <img
+            src="cutting sticker.jpg"
+            alt="Proses cutting sticker">
+
+            <div class="product-copy">
+
+                <h3>Cutting Sticker</h3>
+
+                <p>
+                    Proses pemotongan dan penyiapan
+                    stiker sesuai desain.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- FOTO 2 -->
+        <article class="product">
+
+            <img
+            src="sablon goodie bag.jpg"
+            alt="Proses sablon goodie bag">
+
+            <div class="product-copy">
+
+                <h3>Sablon Goodie Bag</h3>
+
+                <p>
+                    Pembuatan cetakan pada tas
+                    untuk acara dan kebutuhan promosi.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- FOTO 3 -->
+        <article class="product">
+
+            <img
+            src="cutting spanduk.jpg"
+            alt="Proses cutting spanduk">
+
+            <div class="product-copy">
+
+                <h3>Cutting Spanduk</h3>
+
+                <p>
+                    Proses pengerjaan dan finishing
+                    media spanduk.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- FOTO 4 -->
+        <article class="product">
+
+            <img
+            src="lanyard.jpg"
+            alt="Proses pembuatan lanyard">
+
+            <div class="product-copy">
+
+                <h3>Pembuatan Lanyard</h3>
+
+                <p>
+                    Perakitan tali ID card
+                    dan aksesori lanyard.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- FOTO 5 -->
+        <article class="product">
+
+            <img
+            src="sablon baju.jpg"
+            alt="Proses sablon baju">
+
+            <div class="product-copy">
+
+                <h3>Sablon Baju</h3>
+
+                <p>
+                    Pengerjaan sablon untuk
+                    kebutuhan pakaian dan identitas.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- KEUNGGULAN -->
+<section class="advantages" id="keunggulan">
+
+    <div class="section-head">
+
+        <small>WHY CHOOSE US</small>
+
+        <h2>Mengapa Memilih Thunders?</h2>
+
+        <p>
+            Solusi percetakan dan promosi
+            dalam satu tempat.
+        </p>
+
+    </div>
+
+    <div class="advantages-grid">
+
+        <div class="advantage">
+
+            <div class="symbol">✓</div>
+
+            <h3>Layanan Beragam</h3>
+
+            <p>
+                Melayani berbagai kebutuhan
+                digital printing dan advertising.
+            </p>
+
+        </div>
+
+        <div class="advantage">
+
+            <div class="symbol">✦</div>
+
+            <h3>Proses Produksi</h3>
+
+            <p>
+                Didukung proses produksi dan
+                pengerjaan sesuai kebutuhan pesanan.
+            </p>
+
+        </div>
+
+        <div class="advantage">
+
+            <div class="symbol">♡</div>
+
+            <h3>Fokus Pelanggan</h3>
+
+            <p>
+                Mengutamakan kebutuhan dan
+                kepuasan pelanggan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KONTAK -->
+<section class="contact" id="kontak">
+
+    <div class="section-head">
+
+        <small>CONTACT US</small>
+
+        <h2>Hubungi Kami</h2>
+
+        <p>
+            Kunjungi lokasi Thunders Digital Printing.
+        </p>
+
+    </div>
+
+    <div class="contact-box">
+
+        <p>
+            📍 <b>Alamat:</b>
+            Jl. Kasuari, Komplek Kasuari Indah
+        </p>
+
+        <p>
+            🏢 <b>Nama:</b>
+            Thunders Digital Printing and Advertising
+        </p>
+
+        <p>
+            🖨️ <b>Layanan:</b>
+            Digital Printing, Cutting Sticker,
+            Sablon, Lanyard, dan Advertising
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <img
+    src="logo.jpg"
+    alt="Logo Thunders">
+
+    <h3>THUNDERS DIGITAL PRINTING</h3>
+
+    <p>PRINTING AND ADVERTISING</p>
+
+    <p class="tagline">
+        Cetak Cepat, Promosi Tepat, Harga Hemat!
+    </p>
+
+    <small>
+        Jl. Kasuari, Komplek Kasuari Indah
+        <br>
+        © 2026 Thunders Digital Printing
+        and Advertising.
+    </small>
+
+</footer>
+
+</body>
+  </html>
+  
